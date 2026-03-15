@@ -1,0 +1,16 @@
+name: Cache Redis Config Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run a simple command
+        run: echo "Building cache-redis-config project"
